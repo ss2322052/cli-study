@@ -70,5 +70,19 @@ def main():
 
         print(f"{task} を追加しました")
 
+    # --------------------------------------------------
+    # list（タスク一覧を表示する）
+    # --------------------------------------------------
+    elif command == "list":
+        # タスクが1件もない場合の処理
+        if not tasks:
+            print("タスクはありません")
+            return
+        
+        # enumerate() で番号付きで表示
+        # index は　0　から始まるので、start=1　にすることで、1から表示
+        for index, task in enumerate(tasks, start=1):
+            print(f"{index}. {task}")
+
 if __name__ == "__main__":
     main()
