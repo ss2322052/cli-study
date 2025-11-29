@@ -63,10 +63,12 @@ def main():
         task = sys.argv[2]
 
         # リストに追加
-        tasks.append(tasks)
+        tasks.append(task)
 
         # ファイルに保存
         save_tasks(tasks)
 
-        print(f"{task} を追加しました。")
-    
+        print(f"{task} を追加しました")
+
+if __name__ == "__main__":
+    main()
